@@ -116,8 +116,11 @@
 ; (setq display-time-24hr-format t)
 ; (display-time)
 
+;; Word-Wrapping off
 (wrap-no-lines)
 
+;; Line Numbers on
+(linum-mode)
 
 ;;==============================;;
 ;; CUSTOM VARS?
