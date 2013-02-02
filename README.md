@@ -12,8 +12,6 @@ To Do
 * config layout for: r/ess, ruby, etc
 * clean up shortcuts
 
-
-
 Starter Kits
 ------------
 * https://github.com/bbatsov/prelude-modules
@@ -262,6 +260,7 @@ Keyboard Shortcuts
 =================
 
 * http://ergoemacs.org/emacs/keyboard_shortcuts.html
+* http://ergoemacs.org/emacs/emacs_kb_shortcuts.html
 * http://oracc.museum.upenn.edu/doc/builder/emacs/aquamacs/
 
 Buffers/Windows
