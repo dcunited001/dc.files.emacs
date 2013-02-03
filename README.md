@@ -51,7 +51,7 @@ Using ESS
 * http://ess.r-project.org/Manual/ess.html
 * http://www.r-bloggers.com/using-emacs-to-work-with-r/
 * http://snap.nlc.dcccd.edu/learn/idaho/textedit.html
- 
+
 Global
 ------
 
@@ -62,14 +62,14 @@ Binding Hotkeys
     (global-unset-key (kbd "C-_"))
 
 Admin/Scripting
-=================
+===============
 
 * M-x     == run emacs command (C-m C-x)
 * m!      == run shell command
 * C-x m   == start eshell
 * C-x M-m == start your default shell
-# C-x C-e == eval-last-step (eval-region)
-# (ielm)  == start interactive elisp command line
+* C-x C-e == eval-last-step (eval-region)
+* (ielm)  == start interactive elisp command line
 
 Running Code
 =================
@@ -178,7 +178,7 @@ http://emacswiki.org/emacs/CategorySearchAndReplace
 =================
 
 
-Misc Interface 
+Misc Interface
 * (color-theme-select)
 * C-+ == text-scale-increase
 * C-- == text-scale-decrease
@@ -205,7 +205,7 @@ Twittering Mode
 =================
 
 * (twit)  == Open Twittering Buffer
-* C-c C-s == Compose 
+* C-c C-s == Compose
 
 Prelude Mode
 ------------
@@ -227,7 +227,7 @@ Prelude Mode
 Projectile
 ----------
 Interactive Emacs Lisp functions, provided by projectile:
- 
+
 * projectile-find-file C-c p f
 * projectile-grep C-c p g
 * projectile-switch-to-buffer C-c p b
