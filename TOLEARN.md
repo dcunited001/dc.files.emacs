@@ -1,10 +1,12 @@
 http://ergoemacs.org/emacs/ergonomic_emacs_keybinding.html
 http://devblog.avdi.org/category/emacs-reboot/
+http://www.cyborganize.org/clarity/software/emacs-org-mode-installation-configuration-and-tutorial/installing-and-using-ergoemacs-for-intermediate-emacs-users/
 
 Emacs Productivity:
 ===================
 http://ergoemacs.org/emacs/effective_emacs.html
-1. Help Functions 
+
+1. Help Functions
 2. Window Splitting
 3. Dired
 4. iBuffer
@@ -22,10 +24,20 @@ u	Unmark
 S	Save marked buffer
 D	Close marked buffers
 
+Text-Nav:
+=========
+
+
+
 Misc:
 =====
 M-g M-g		goto-line
-??		linum-mode:
+??		linum-mode
+
+C-x C-e					eval current line
+M-x eval-region			eval region
+M-x eval-buffer			eval current buffer
+M-x load-file [file]	eval line
 
 Magit:
 ======
@@ -44,8 +56,9 @@ Markdown Mode:
 ==============
 http://jblevins.org/projects/markdown-mode/
 
-C-c C-c p	markdown preview 
+C-c C-c p	markdown preview
 M-x		markdown-mode
 
-
-
+Gists:
+======
+??		gist-region-or-buffer
