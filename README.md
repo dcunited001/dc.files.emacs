@@ -61,6 +61,9 @@ Binding Hotkeys
     (global-set-key (kbd "<f8>") 'run-current-file)
     (global-unset-key (kbd "C-_"))
 
+To determine a char that involves an escape sequence:
+> C-q [enter char]
+
 Admin/Scripting
 ===============
 
