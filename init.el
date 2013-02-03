@@ -2,6 +2,9 @@
 ;; ensure functions are loaded
 (load "~/.emacs.d/personal/support.el")
 
+;; add marmalade archive
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 ;;==============================;;
 ;; USER INFO
 ;;==============================;;
