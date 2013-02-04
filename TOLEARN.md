@@ -26,9 +26,27 @@ D	Close marked buffers
 
 Text-Nav:
 =========
+[Home/End]			begin/end line
+M-[Home/End]		??
+C-[Home/End]		begin/end doc
 
+[pageup/pagedown]	pageup/pagedown
 
+M-[jikl]			arrow keys
+M-[JL]				begin/end doc
+M-[IK]				pageup/pagedown
+M-[hH]				begin/end line
 
+M-[DF]				delete char
+M-[ER]				delete word
+M-[gG]				delete to home/end
+
+M-[xX]				cut/cut-all
+M-[cC]				copy/copy-all
+M-[vV]				paste/paste-prev
+
+M-[Space]			Set Mark
+M-s-[Space]			Mark Paragraph
 Misc:
 =====
 M-g M-g		goto-line
