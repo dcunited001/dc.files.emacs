@@ -200,6 +200,7 @@ Help
 * F1 k  == describe-key; Show command documentation; prompts for keystrokes"
 * C-h k == describe-key
 * C-h a == apropos (search in all Emacs symbols)
+* C-h b === Show all active key bindings
 * C-H f? == Show command name on message line; prompts for keystrokes
 * C-H f? == Describe function; prompts for command or function name, shows documentation in other window
 * C-H i == Info browser; gives access to online documentation for emacs and more
