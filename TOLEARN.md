@@ -13,6 +13,10 @@ http://ergoemacs.org/emacs/effective_emacs.html
 5. Remap Freq Keys
 6. Find/Replace && Regex
 
+Google!
+=================
+C-c g		initiate google search!
+
 iBuffer:
 ========
 C-x C-b		list buffers
