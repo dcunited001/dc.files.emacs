@@ -1,16 +1,63 @@
-http://ergoemacs.org/emacs/ergonomic_emacs_keybinding.html
-http://devblog.avdi.org/category/emacs-reboot/
-http://www.cyborganize.org/clarity/software/emacs-org-mode-installation-configuration-and-tutorial/installing-and-using-ergoemacs-for-intermediate-emacs-users/
+- http://ergoemacs.org/emacs/ergonomic_emacs_keybinding.html
+- http://devblog.avdi.org/category/emacs-reboot/
+- http://www.cyborganize.org/clarity/software/emacs-org-mode-installation-configuration-and-tutorial/installing-and-using-ergoemacs-for-intermediate-emacs-users/
 
 Emacs Productivity:
 ===================
-http://ergoemacs.org/emacs/effective_emacs.html
-http://www.xkeys.com/xkeys/xkfoot.php
+- http://ergoemacs.org/emacs/effective_emacs.html
+- http://www.xkeys.com/xkeys/xkfoot.php
 
 6. Find/Replace && Regex
 3. Dired
 4. iBuffer
 5. Remap Freq Keys
+
+Rails!
+=================
+#### Rinari Navigation
+C-c ; f (x), where x is:
+- c controller
+- e environment
+- f any file
+- h helper
+- i migration
+- j javascript
+- l plugin
+- m model
+- n configuration
+- o log
+- p public
+- s script
+- t test
+- v view
+- w worker
+- x fixture
+- y stylesheet
+
+#### Rinari Tags
+http://rinari.rubyforge.org/Navigation.html#Navigation
+
+to create a tags file using ctags:
+
+    ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor
+
+#### Rinary Testing
+rinari-test
+> Test the current ruby function. If current function is not a test,
+> then try to jump to the related test and run it.
+> Dump output to a compilation buffer allowing jumping
+> between errors and source code.
+
+#### Rinary Execution
+- rinari-rake
+- rinari-console
+- rinari-sql
+- rinari-web-server
+- rinari-test
+
+#### Rinary Misc
+- rinari-rgrep
+- rinari-insert-erb-skeleton
 
 Google!
 =================
@@ -50,6 +97,7 @@ M-[vV]				paste/paste-prev
 
 M-[Space]			Set Mark
 M-s-[Space]			Mark Paragraph
+
 Misc:
 =====
 M-g M-g		goto-line
@@ -62,7 +110,7 @@ M-x load-file [file]	eval line
 
 Magit:
 ======
-http://philjackson.github.com/magit/magit.html
+- http://philjackson.github.com/magit/magit.html
 
 C-x g		magit-status
 C-c C-c		magit-log-edit-commit
@@ -75,7 +123,7 @@ P p	push commits
 
 Markdown Mode:
 ==============
-http://jblevins.org/projects/markdown-mode/
+- http://jblevins.org/projects/markdown-mode/
 
 C-c C-c p	markdown preview
 M-x		markdown-mode
