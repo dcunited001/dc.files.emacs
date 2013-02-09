@@ -54,6 +54,10 @@
 ;; MA-jor
 ;; MO-des
 ;; MuMaMo-Mode for rhtml files
+;;==============================;;
+;; http://www.emacswiki.org/cgi-bin/wiki/MuMaMo
+;; http://rinari.rubyforge.org/MuMaMo_002dMode.html#MuMaMo_002dMode
+;;==============================;;
 ;; (add-to-list 'load-path "~/path/to/your/elisp/nxml-directory/util")
 ;; (require 'mumamo-fun)
 ;; (setq mumamo-chunk-coloring 'submode-colored)
