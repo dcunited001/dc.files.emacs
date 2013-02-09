@@ -39,7 +39,7 @@
 ;; reload emacs config
 ;;==============================;;
 ;; source ~/.emacs.d/init.el
-(defun semacs () "Reload your .emacs file without restarting Emacs" (interactive) 
+(defun semacs () "Reload your .emacs file without restarting Emacs" (interactive)
   (load-file "~/.emacs"))
 
 ;;==============================;;
@@ -54,11 +54,11 @@
 ;;==============================;;
 ;; text
 ;;==============================;;
-(defun insert-date-string () "Insert a nicely formated date string" (interactive) 
+(defun insert-date-string () "Insert a nicely formated date string" (interactive)
   (insert (format-time-string "%a %b %d %H:%M:%S %Y")))
-(defun wrap-no-lines () "Enable line wrapping" (interactive) 
+(defun wrap-no-lines () "Enable line wrapping" (interactive)
   (set-default 'truncate-lines t))
-(defun wrap-all-lines () "Enable line wrapping" (interactive) 
+(defun wrap-all-lines () "Enable line wrapping" (interactive)
   (set-default 'truncate-lines nil))
 
 ; (defun toggle-wrap-lines ()
@@ -93,7 +93,7 @@
 ;;==============================;;
 ;; functions to set code style
 ;;==============================;;
-;; Functions to change code style in all buffers 
+;; Functions to change code style in all buffers
 ;;    to GNU/Devhelp/GnomeTracker
 
 ;; Interactive change of code style in ALL buffers to GNU
@@ -254,4 +254,3 @@
 ;   (insert "\n/* Copyright (C) ")
 ;   (insert (format-time-string "%Y"))
 ;   (insert " Free Software Foundation, Inc. */\n\n"))
-

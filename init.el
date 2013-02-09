@@ -1,4 +1,3 @@
-
 ;; ensure functions are loaded
 (load "~/.emacs.d/personal/support.el")
 
@@ -102,7 +101,6 @@
 ; ;; My default font size will be 10pt
 ; (set-face-attribute 'default nil :height 100)
 
-
 ; ;; Dont show the GNU splash screen
 ; (setq inhibit-startup-message t)
 
@@ -124,6 +122,17 @@
 
 ;; Line Numbers on
 (linum-mode)
+
+;;==============================;;
+;; Modes for specific file types
+;;==============================;;
+
+;; also: make sure this file is opened as an eLisp file
+(add-to-list 'auto-mode-alist '("/bindkeys.emacs.ubu\\'" . emacs-lisp-mode))
+(add-to-list 'auto-mode-alist '("/bindkeys.emacs.mac\\'" . emacs-lisp-mode))
+
+; add ruby Gemfiles
+(add-to-list 'auto-mode-alist '("/Gemfile\\'" . ruby-mode))
 
 ;;==============================;;
 ;; CUSTOM VARS?
