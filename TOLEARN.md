@@ -5,13 +5,12 @@ http://www.cyborganize.org/clarity/software/emacs-org-mode-installation-configur
 Emacs Productivity:
 ===================
 http://ergoemacs.org/emacs/effective_emacs.html
+http://www.xkeys.com/xkeys/xkfoot.php
 
-1. Help Functions
-2. Window Splitting
+6. Find/Replace && Regex
 3. Dired
 4. iBuffer
 5. Remap Freq Keys
-6. Find/Replace && Regex
 
 Google!
 =================
