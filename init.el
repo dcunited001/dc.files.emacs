@@ -131,9 +131,6 @@
 (add-to-list 'auto-mode-alist '("/bindkeys.emacs.ubu\\'" . emacs-lisp-mode))
 (add-to-list 'auto-mode-alist '("/bindkeys.emacs.mac\\'" . emacs-lisp-mode))
 
-; add ruby Gemfiles
-(add-to-list 'auto-mode-alist '("/Gemfile\\'" . ruby-mode))
-
 ;;==============================;;
 ;; CUSTOM VARS?
 ;;==============================;;
