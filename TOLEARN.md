@@ -133,3 +133,9 @@ M-x		markdown-mode
 Gists:
 ======
 ??		gist-region-or-buffer
+
+Twit:
+=====
+http://emacswiki.org/emacs/TwitteringMode
+- M-x twit
+- u new tweet
