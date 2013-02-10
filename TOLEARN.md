@@ -14,6 +14,8 @@ Emacs Productivity:
 
 Rails!
 =================
+Suggested Remappings: http://emacswiki.org/emacs/RubyOnRails
+
 #### Rinari Navigation
 C-c ; f (x), where x is:
 - c controller
