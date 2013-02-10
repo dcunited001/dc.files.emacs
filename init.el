@@ -1,5 +1,5 @@
-;; ensure functions are loaded
-(load "~/.emacs.d/personal/support.el")
+;; load support functions
+(load "~/.emacs.d/personal/support/support.el")
 
 ;; add marmalade archive
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -7,7 +7,7 @@
 ;;==============================;;
 ;; USER INFO
 ;;==============================;;
-(setq user-full-name "is this script even running?")
+(setq user-full-name "David Conner")
 (setq user-mail-address "dconner.pro@gmail.com")
 
 ;;==============================;;
@@ -19,17 +19,13 @@
 ;;==============================;;
 ;; PERSONAL SCRIPTS
 ;;==============================;;
-; (these files should be loaded automatically)
-; (load "~/.emacs.d/personal/bindkeys.emacs.el")
-; (load "~/.emacs.d/personal/ess.el")
-; (load "~/.emacs.d/personal/prelude.el")
-; (load "~/.emacs.d/personal/support.el")
-; (load "~/.emacs.d/personal/xiki.el")
-
-;;==============================;;
-;; HYPER KEY
-;;==============================;;
-; (setq mac-control-modifier 'hyper)
+; no longer want these files to be loaded automatically
+;   they seem to be loaded inconsistently
+(load "~/.emacs.d/personal/support/bindkeys.el")
+(load "~/.emacs.d/personal/support/ess.el")
+(load "~/.emacs.d/personal/support/prelude.el")
+(load "~/.emacs.d/personal/support/rails.el")
+;(load "~/.emacs.d/personal/support/xiki.el")
 
 ;;==============================;;
 ;; WINDMOVE
