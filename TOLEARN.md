@@ -12,29 +12,69 @@ Emacs Productivity:
 4. iBuffer
 5. Remap Freq Keys
 
+Find & Replace
+==============
+
+> arrrrggg!! find&replace! my ownly weaknesss! how did you know??!
+
+- C-f i-search
+
 Rails!
 =================
 Suggested Remappings: http://emacswiki.org/emacs/RubyOnRails
 
-#### Rinari Navigation
-C-c ; f (x), where x is:
-- c controller
-- e environment
-- f any file
-- h helper
-- i migration
-- j javascript
-- l plugin
+### M-R w
+#### MVC, etc
 - m model
+- v view
+- c controller
+- M mailer
+- a application
+- w worker
+- i migration
+- f file-in-project
+- ; find-by-context
+- h helper
+
+#### Config
 - n configuration
+- e environment
 - o log
+
+#### Tests
+- t test
+- r rspec
+- F features
+- S steps
+- x fixture
+- z rspec-fixture
+
+#### HTML/CSS/JS
+- j javascript
+- y stylesheet
+- Y sass
 - p public
+
+#### Misc
+- l lib
+- s script
+- C cells
+- u plugin
+
+### M-r c
+- ' find-by-context
+- ; find-by-context
+- c **console**
+- d cap
+- e insert-erb-skeleton
+- g rgrep
+- p goto-partial
+- q sql
+- r **rake**
 - s script
 - t test
-- v view
-- w worker
-- x fixture
-- y stylesheet
+- w web-server
+- x extract-partial
 
 #### Rinari Tags
 http://rinari.rubyforge.org/Navigation.html#Navigation
