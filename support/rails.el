@@ -65,6 +65,19 @@
 ;; (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
 
 ;;==============================;;
+;; Haml-Mode
+;;==============================;;
+;; Note that as HAML uses spaces only for indentation
+;;   make sure you turn off tabs, also you can enable auto-indent mode.
+;;
+;; hmmmm, should i cut? do i need?
+;;
+;;(add-hook 'haml-mode-hook
+;;          (lambda ()
+;;            (setq indent-tabs-mode nil)
+;;            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+
+;;==============================;;
 ;; other ruby/rails tools
 ;;==============================;;
 ;; snippets/rails-snippets
