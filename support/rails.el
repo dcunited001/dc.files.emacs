@@ -79,6 +79,15 @@
 ;;            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;;==============================;;
+;; RVM 
+;;==============================;;
+;; Emacs needs to use the proper version of ruby
+;;   otherwise, syntax highlighting is whack
+;;   and Rinari does not work!
+;;(require 'rvm)
+(rvm-use-default)
+
+;;==============================;;
 ;; other ruby/rails tools
 ;;==============================;;
 ;; snippets/rails-snippets
@@ -91,3 +100,4 @@
 ;; rspec-mode?
 ;; ruby-test-mode?
 ;; ruby-tools?
+
