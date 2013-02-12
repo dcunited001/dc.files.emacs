@@ -38,6 +38,10 @@
 ;;==============================;;
 ;; rinari-launch to start
 
+;; always enable (for now)
+;; TODO: pass in an option or something
+(require 'rinari)
+
 ;; install problems?
 ;;   require 'cl ?? failed
 ;;   also a few functions could not be found (rinari-find??)
@@ -79,7 +83,7 @@
 ;;            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;;==============================;;
-;; RVM 
+;; RVM
 ;;==============================;;
 ;; Emacs needs to use the proper version of ruby
 ;;   otherwise, syntax highlighting is whack
@@ -100,4 +104,3 @@
 ;; rspec-mode?
 ;; ruby-test-mode?
 ;; ruby-tools?
-
