@@ -36,11 +36,9 @@
 ;;==============================;;
 ;; RiNaRi
 ;;==============================;;
-;; rinari-launch to start
-
-;; always enable (for now)
-;; TODO: pass in an option or something
-(require 'rinari)
+;; set hook for ruby and haml
+(add-hook 'ruby-mode-hook 'rinari-minor-mode)
+(add-hook 'haml-mode-hook 'rinari-minor-mode)
 
 ;; install problems?
 ;;   require 'cl ?? failed
