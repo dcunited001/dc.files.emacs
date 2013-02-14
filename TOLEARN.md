@@ -22,12 +22,16 @@ Find/Replace && Regex
 
 Magit:
 ======
+- MAGIT CHEATSHEET: http://daemianmack.com/magit-cheatsheet.html
 - http://philjackson.github.com/magit/magit.html
 
 C-x g		magit-status
 C-c C-c		magit-log-edit-commit
 
-d	diff
+#### TODO: fix diff!  doesn't seem to work right
+
+d	diff (vs head)
+D   diff (vs SHA)
 s	stage
 u	unstage
 c	enter commit description
