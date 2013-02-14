@@ -6,18 +6,53 @@ Emacs Productivity:
 ===================
 - http://ergoemacs.org/emacs/effective_emacs.html
 - http://www.xkeys.com/xkeys/xkfoot.php
+- http://martinowen.net/blog/2010/02/tips-for-emacs-ibuffer.html
 
-6. Find/Replace && Regex
-3. Dired
-4. iBuffer
-5. Remap Freq Keys
+Find/Replace && Regex
+---------------------
+**ack**
+**isearch**
 
-Find & Replace
-==============
+1. Buffer Navigation
+2. Dired
+3. iBuffer
+4. Remap Freq Keys
+5. SmartTab/HippieExpand
+6. Todo Navigation
 
-> arrrrggg!! find&replace! my ownly weaknesss! how did you know??!
+Magit:
+======
+- http://philjackson.github.com/magit/magit.html
 
-- C-f i-search
+C-x g		magit-status
+C-c C-c		magit-log-edit-commit
+
+d	diff
+s	stage
+u	unstage
+c	enter commit description
+P p	push commits
+
+Gists:
+======
+??		gist-region-or-buffer
+
+
+iBuffer
+=======
+- TODO: define groups
+-
+
+Dired
+=====
+http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
+
+####copy/rename/print/etc
+- C => Copy
+- D => Delete
+- R => Rename
+- S => Symlink
+- M => Modespec (change permissions)
 
 Rails!
 =================
@@ -150,19 +185,6 @@ M-x eval-region			eval region
 M-x eval-buffer			eval current buffer
 M-x load-file [file]	eval line
 
-Magit:
-======
-- http://philjackson.github.com/magit/magit.html
-
-C-x g		magit-status
-C-c C-c		magit-log-edit-commit
-
-d	diff
-s	stage
-u	unstage
-c	enter commit description
-P p	push commits
-
 Markdown Mode:
 ==============
 - http://jblevins.org/projects/markdown-mode/
@@ -170,12 +192,9 @@ Markdown Mode:
 C-c C-c p	markdown preview
 M-x		markdown-mode
 
-Gists:
-======
-??		gist-region-or-buffer
-
 Twit:
 =====
 http://emacswiki.org/emacs/TwitteringMode
 - M-x twit
 - u new tweet
+- C-u C-m [Enter] Retweet (Native)

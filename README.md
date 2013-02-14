@@ -1,6 +1,8 @@
 Emacs Prelude: Keymap
 ---------------------
 
+**Note: the keybindings in this file are mostly standard emacs keys and not up to date**
+
 To Do
 -------
 
