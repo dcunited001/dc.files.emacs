@@ -13,12 +13,53 @@ Find/Replace && Regex
 **ack**
 **isearch**
 
+1. Projectile
 1. Buffer Navigation
-2. Dired
-3. iBuffer
-4. Remap Freq Keys
-5. SmartTab/HippieExpand
-6. Todo Navigation
+1. Dired
+1. iBuffer
+1. Remap Freq Keys
+1. SmartTab/HippieExpand
+1. Todo Navigation
+1. Shelling Out
+
+Projectile:
+===========
+
+TODO: set up rails-specific folder exclusions
+TODO: change to hyper-p
+
+projectile-grep               C-c p g
+projectile-replace            C-c p r
+projectile-grep               C-c p g
+projectile-ack                C-c p a
+projectile-find-test-file     C-c p T
+projectile-kill-buffers       C-c p k
+projectile-multi-occur        C-c p o
+projectile-recentf            C-c p e
+projectile-regenerate-tags    C-c p R
+projectile-switch-to-buffer   C-c p b
+projectile-test-project       C-c p p
+projectile-toggle-between-implemenation-and-test C-c p t
+projectile-reindex-current-project
+
+#### iSearch Forward
+- H-f SPC isearch-forward
+- H-F     isearch-repeat-forward
+
+#### iSearch Backward
+- H-f _ isearch-backward
+- H-B   isearch-repeat-backward
+
+Shell:
+======
+
+
+
+- http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/
+- M-x shell - inferior shell mode
+- M-x term (or ansi-term) - emacs terminal emulator (need to switch between linemode & charmode)
+- M-x eshell - emacs own shell (like bash/zsh, written entirely in elisp)
+- M-A single shell command
 
 Magit:
 ======
@@ -40,7 +81,6 @@ P p	push commits
 Gists:
 ======
 ??		gist-region-or-buffer
-
 
 iBuffer
 =======
