@@ -117,7 +117,9 @@
 (wrap-no-lines)
 
 ;; Line Numbers on
-(linum-mode)
+;;(linum-mode)
+(global-linum-mode)
+
 
 ;;==============================;;
 ;; Modes for specific file types
