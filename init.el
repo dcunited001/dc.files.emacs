@@ -46,6 +46,12 @@
 ; (setq framemove-hook-into-windmove t)
 
 ;;==============================;;
+;; SPACES/TABS
+;;==============================;;
+(setq standard-indent 2)
+(setq-default indent-tabs-mode nil)
+
+;;==============================;;
 ;; HIGHLIGHTING
 ;;==============================;;
 ; (setq transient-mark-mode t) ;; Highlight region between point and mark
