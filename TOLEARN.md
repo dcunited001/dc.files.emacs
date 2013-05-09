@@ -89,14 +89,51 @@ iBuffer
 
 Dired
 =====
-http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
+* Overview: http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
+* Navigation: http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired-Navigation.html#Dired-Navigation
+* Shell Commands: http://www.gnu.org/software/emacs/manual/html_node/emacs/Shell-Commands-in-Dired.html#Shell-Commands-in-Dired
+* Subdirectory Motion: http://www.gnu.org/software/emacs/manual/html_node/emacs/Subdirectory-Motion.html#Subdirectory-Motion
+* Subdirectory Switches: http://www.gnu.org/software/emacs/manual/html_node/emacs/Subdir-Switches.html#Subdir-Switches
 
-####copy/rename/print/etc
-- C => Copy
-- D => Delete
-- R => Rename
-- S => Symlink
-- M => Modespec (change permissions)
+#### DIRED_DIFF
+- = = Diff Files
+
+#### Shell Commands (& and !)
+- ! = Shell Cmd
+- & = Shell Cmd (async)
+
+#### Copy/Rename/Print/Etc
+- C = Copy
+- D = Delete
+- R = Rename
+- S = Symlink
+- H = Symlink
+- + = Create Directory
+- A = Search Files By regexp
+- Q = Query Replace Regexp on Files
+
+#### Permissions/Groups:
+- M = Modespec (change permissions)
+- G = Change Group for set of files
+- O = Change Owner
+
+#### Encrypt/Decrypt/Compress
+- Z = Compress Specified Files
+- e = Encrypt
+- d = Decrypt
+- v = Verify Signatures
+- s = Digitally Sign
+
+#### Lisp
+- L = Load Lisp Files
+- B = Bytecompile Lisp Files
+
+#### Misc
+- T = Touch Timestamp
+
+#### To Map:
+- dired-copy-filename-as-kill
+- dired-compare-directories
 
 Rails!
 =================
