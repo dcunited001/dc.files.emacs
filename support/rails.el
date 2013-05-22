@@ -88,7 +88,7 @@
 ;; Emacs needs to use the proper version of ruby
 ;;   otherwise, syntax highlighting is whack
 ;;   and Rinari does not work!
-;;(require 'rvm)
+(require 'rvm)
 (rvm-use-default)
 
 ;;==============================;;
