@@ -1,0 +1,3 @@
+[submodule "ergoemacs"]
+	path = ergoemacs
+	url = https://code.google.com/p/ergoemacs/
