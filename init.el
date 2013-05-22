@@ -16,17 +16,6 @@
 ; once this is configured, no need to authorize every time
 ; (setq twittering-use-master-password t)
 
-
-;;==============================;;
-;; ERGOEMACS
-;;==============================;;
-;; loading from package-install is failing because the filename symbol can't be resolved 
-;; (require 'ergoemacs-mode)
-
-;; load locally from git submodule instead
-(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us")
-(load-file "~/.emacs.d/personal/ergoemacs/site-lisp/site-start.el")
-
 ;;==============================;;
 ;; PERSONAL SCRIPTS
 ;;==============================;;
