@@ -1,8 +1,16 @@
 ;; load support functions
 (load "~/.emacs.d/personal/support/support.el")
+(require 'json)
 
 ;; add marmalade archive
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+
+;;==============================;;
+;; ENV INFO
+;;==============================;;
+;; this var needs to be set in order for os-specific keys to be applied 
+(setq emos (getenv "OS_TYPE"))
 
 ;;==============================;;
 ;; USER INFO
