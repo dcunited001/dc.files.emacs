@@ -32,7 +32,9 @@
 (load "~/.emacs.d/personal/support/ess.el")
 (load "~/.emacs.d/personal/support/prelude.el")
 (load "~/.emacs.d/personal/support/rails.el")
+(load "~/.emacs.d/personal/support/node.el")
 ;(load "~/.emacs.d/personal/support/xiki.el")
+(load "~/.emacs.d/personal/support/clojure.el")
 (load "~/.emacs.d/personal/support/bindkeys.el")
 
 ;;==============================;;
