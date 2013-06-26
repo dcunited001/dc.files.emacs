@@ -7,6 +7,8 @@
 ;; timers docs: http://www.gnu.org/software/emacs/manual/html_node/elisp/Timers.html
 ;; (setq my-timer-store (run-at-time "1 min" 900 'my-func))
 
+;; also - see http://obfuscatedcode.wordpress.com/2007/04/26/configuring-emacs-for-gmails-smtp/
+
 ;;==============================;;
 ;; switching next/prev user buffers
 ;;==============================;;
