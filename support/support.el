@@ -1,4 +1,13 @@
 ;;==============================;;
+;; send-mail-at
+;;==============================;;
+;; schedle a mail to be sent at a specified time
+;; .. hmm then .. that instance of emacs needs to be running .. right?
+;; run-at-time example: http://stackoverflow.com/questions/11670567/getting-a-list-of-running-emacs-timers
+;; timers docs: http://www.gnu.org/software/emacs/manual/html_node/elisp/Timers.html
+;; (setq my-timer-store (run-at-time "1 min" 900 'my-func))
+
+;;==============================;;
 ;; switching next/prev user buffers
 ;;==============================;;
 ;; http://ergoemacs.org/emacs/effective_emacs.html
