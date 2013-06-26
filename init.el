@@ -1,3 +1,6 @@
+;; to automatically install packages:
+;; (load "~/.emacs.d/personal/support/install.el")
+
 ;; load support functions
 (load "~/.emacs.d/personal/support/support.el")
 (require 'json)
