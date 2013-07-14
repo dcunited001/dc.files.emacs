@@ -148,6 +148,9 @@
 (add-to-list 'auto-mode-alist '("/bindkeys.emacs.ubu\\'" . emacs-lisp-mode))
 (add-to-list 'auto-mode-alist '("/bindkeys.emacs.mac\\'" . emacs-lisp-mode))
 
+;; autoload puppet-mode
+(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+
 ;;==============================;;
 ;; CUSTOM VARS?
 ;;==============================;;
