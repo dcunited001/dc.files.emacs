@@ -4,10 +4,48 @@
 ;; load support functions
 (load "~/.emacs.d/personal/support/support.el")
 (require 'json)
-
+(require 'auto-complete)
 ;; add marmalade archive
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages '(clojure-mode
+                      nrepl
+                      nrepl-ritz
+                      ergoemacs-mode
+                      rvm
+                      rinari
+                      ess
+                      yasnippet
+                      twittering-mode
+                      ack
+                      aes
+                      bundler
+                      bitly
+                      closure-mode
+                      cmake-mode
+                      coffee-mode
+                      db-pg
+                      flymake packages
+                      gnugo
+                      spaces
+                      sml-mode
+                      slime
+                      scss-mode
+                      sass-mode,
+                      ruby-test-mode
+                      ruby-mode
+                      ruby-compilation
+                      json
+                      auto-complete
+))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 ;;==============================;;
 ;; ENV INFO
@@ -35,6 +73,7 @@
 ;;==============================;;
 ;; once this is configured, no need to authorize every time
 ;;  but where is the password stored?
+
 (eval-after-load 'twittering-mode
   (progn (setq twittering-icon-mode t)
          (setq twittering-use-master-password t)))
