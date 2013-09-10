@@ -35,7 +35,9 @@
 ;;==============================;;
 ;; once this is configured, no need to authorize every time
 ;;  but where is the password stored?
-(setq twittering-use-master-password t)
+(eval-after-load 'twittering-mode
+  (progn (setq twittering-icon-mode t)
+         (setq twittering-use-master-password t)))
 
 ;;==============================;;
 ;; ERGOEMACS
