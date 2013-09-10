@@ -28,10 +28,25 @@
 ; (setq twittering-use-master-password t)
 
 ;;==============================;;
+;; ERGOEMACS
+;;==============================;;
+;;  http://ergoemacs.org/emacs/keystroke_rep.html
+
+(setq ergoemacs-theme nil)
+(setq ergoemacs-keyboard-layout "us")
+(ergoemacs-mode 1)
+
+(defun ergoemacs-print-buffer-confirm () 
+  "overwrite the ergoemacs function to re-remap the C-p to hyper"
+  (interactive)
+  (osx-map-hyper))
+
+;;==============================;;
 ;; PERSONAL SCRIPTS
 ;;==============================;;
 ; no longer want these files to be loaded automatically
 ;   they seem to be loaded inconsistently
+(load "~/.emacs.d/personal/support/auto-complete.el")
 (load "~/.emacs.d/personal/support/ess.el")
 (load "~/.emacs.d/personal/support/prelude.el")
 (load "~/.emacs.d/personal/support/rails.el")
