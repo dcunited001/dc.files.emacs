@@ -78,6 +78,7 @@
 ;;==============================;;
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
+(setq require-final-newline t)
 
 ;;==============================;;
 ;; HIGHLIGHTING
