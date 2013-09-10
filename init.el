@@ -25,17 +25,15 @@
                       aes
                       bundler
                       bitly
-                      closure-mode
                       cmake-mode
                       coffee-mode
                       db-pg
-                      flymake packages
                       gnugo
                       spaces
                       sml-mode
                       slime
                       scss-mode
-                      sass-mode,
+                      sass-mode
                       ruby-test-mode
                       ruby-mode
                       ruby-compilation
