@@ -1,23 +1,12 @@
 ;;==============================;;
 ;; PRELUDE CONFIG
 ;;==============================;;
-;; change theme
-;;(disable-theme 'zenburn)
-;;(load-theme 'wheatgrass t)
-;;(enable-theme 'wheatgrass)
-
-;; (load-theme 'wheatgrass t)
-;; (load-theme 'tango-dark t)
-;; (load-theme 'zenburn t)
-(load-theme 'wombat t)
-;; (load-theme 'solarized-dark t)
 
 ;; enable whitespace-mode
 ;; (setq prelude-whitespace t)
 
 ;; disable prelude's spellcheck
 ;; (setq prelude-flyspell nil)
-
 
 ;;==============================;;
 ;; Guru Mode (Emacs Prelude)

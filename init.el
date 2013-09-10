@@ -22,10 +22,20 @@
 (setq user-mail-address "dconner.pro@gmail.com")
 
 ;;==============================;;
+;; THEME
+;;==============================;;
+;; (load-theme 'wheatgrass t)
+;; (load-theme 'tango-dark t)
+;; (load-theme 'wombat t)
+;; (load-theme 'solarized-dark t)
+(load-theme 'zenburn t) ;; config'd with rainbow delimiters
+
+;;==============================;;
 ;; TWITTERING-MODE
 ;;==============================;;
-; once this is configured, no need to authorize every time
-; (setq twittering-use-master-password t)
+;; once this is configured, no need to authorize every time
+;;  but where is the password stored?
+(setq twittering-use-master-password t)
 
 ;;==============================;;
 ;; ERGOEMACS
