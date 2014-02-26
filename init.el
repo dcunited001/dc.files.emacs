@@ -96,13 +96,19 @@
 ; no longer want these files to be loaded automatically
 ;   they seem to be loaded inconsistently
 (load "~/.emacs.d/personal/support/auto-complete.el")
-(load "~/.emacs.d/personal/support/ess.el")
+;;(load "~/.emacs.d/personal/support/ess.el")
 (load "~/.emacs.d/personal/support/prelude.el")
 (load "~/.emacs.d/personal/support/rails.el")
 (load "~/.emacs.d/personal/support/node.el")
 ;(load "~/.emacs.d/personal/support/xiki.el")
 (load "~/.emacs.d/personal/support/clojure.el")
 (load "~/.emacs.d/personal/support/bindkeys.el")
+
+;;==============================;;
+;; MAGIT
+;;==============================;;
+(if (file-executable-p "/usr/local/bin/emacsclient")
+    (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
 
 ;;==============================;;
 ;; WINDMOVE
