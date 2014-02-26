@@ -57,7 +57,9 @@
 ;; https://github.com/kingtim/nrepl.el
 ;; https://github.com/clojure-emacs/ac-nrepl
 (require 'nrepl)
-(require 'nrepl-ritz)
+;; TODO: replace nrepl-ritz with cider-ritz
+;; https://github.com/pallet/ritz/pull/114
+;;(require 'nrepl-ritz)
 
 ;; (add-hook 'nrepl-interaction-mode-hook
 ;;   'nrepl-turn-on-eldoc-mode)
