@@ -13,8 +13,9 @@
   (package-refresh-contents))
 
 (defvar my-packages '(clojure-mode
-                      nrepl
+                      nrepl  ;; not found on last setup - install via list-packages
                       nrepl-ritz
+                      ac-nrepl
                       ergoemacs-mode
                       rvm
                       rinari
@@ -39,6 +40,7 @@
                       ruby-compilation
                       json
                       auto-complete
+                      rbenv
 ))
 
 (dolist (p my-packages)
