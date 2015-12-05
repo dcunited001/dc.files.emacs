@@ -16,7 +16,6 @@
                       nrepl  ;; not found on last setup - install via list-packages
                       nrepl-ritz
                       ac-nrepl
-                      ergoemacs-mode
                       rvm
                       rinari
                       ess
@@ -40,7 +39,10 @@
                       ruby-compilation
                       json
                       auto-complete
+                      clojure-cheatsheet
                       rbenv
+                      paredit
+                      synosaurus
 ))
 
 (dolist (p my-packages)
@@ -99,7 +101,7 @@
 ;   they seem to be loaded inconsistently
 (load "~/.emacs.d/personal/support/auto-complete.el")
 ;;(load "~/.emacs.d/personal/support/ess.el")
-(load "~/.emacs.d/personal/support/prelude.el")
+;;(load "~/.emacs.d/personal/support/prelude.el")
 (load "~/.emacs.d/personal/support/rails.el")
 (load "~/.emacs.d/personal/support/node.el")
 ;(load "~/.emacs.d/personal/support/xiki.el")
