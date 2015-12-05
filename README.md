@@ -3,8 +3,22 @@ Emacs Prelude: Keymap
 
 **Note: the keybindings in this file are mostly standard emacs keys and not up to date**
 
+To Learn
+--------
+
+* use winner-mode commands to undo/redo window configuration changes
+* learn to modify config without restarting emacs
+
 To Do
 -------
+
+new:
+
+* haskell config
+* config paredit mode for lisps and elisp
+* restore C-p functionality
+
+old:
 
 * clean up readme & links
 * move links under relavent keyboard sections?
