@@ -109,6 +109,7 @@
 (load "~/.emacs.d/personal/support/bindkeys.el")
 (load "~/.emacs.d/personal/support/haskell.el")
 (load "~/.emacs.d/personal/support/emacs-lisp.el")
+(load "~/.emacs.d/personal/support/markdown.el")
 
 ;;==============================;;
 ;; MAGIT
