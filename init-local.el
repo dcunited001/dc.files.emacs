@@ -14,4 +14,6 @@
 
 (setq default-tab-width 2)
 
+(set-frame-font "DejaVu Sans Mono for Powerline" t t)
+
 (provide 'init-local)
