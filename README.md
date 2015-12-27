@@ -12,6 +12,17 @@ or any idea of what a good emacs config should feel like.  This pretty
 much delayed me using emacs by like two years.  My keybindings configs
 were all non-standard, so that was another barrier to entry for me.
 
+Another major mistake was trying to use terminal emacs, instead of GUI
+emacs.  Yet another was trying to get GUI emacs to behave exactly the
+same as terminal emacs.  I should have just gone with GUI emacs, which
+works out better for application switching, as I don't need to 
+navigate to my terminal app *then also navigate to my emacs tab
+within the terminal*.  Config settings that were hard to get to behave
+exactly the same within GUI as the terminal include: metakey behavior
+and the hyper/super keys.  Basically, i needed to mainain a separate
+set of keybindings for emacs in terminal and emacs in GUI.  VERY VERY 
+CONFUSING.
+
 Eventually, i will incorporate some of the ideas of my own
 `emacs.d` into `init-local.el` and better structure the files loaded
 from it.  Some of my emacs ideas weren't too bad, but most were not
