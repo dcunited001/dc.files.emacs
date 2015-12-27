@@ -1,6 +1,32 @@
 Emacs Prelude: Keymap
 ---------------------
 
+NOTE: i have all but abandoned this repo.  the only file that's being
+used for now is `init-local.el`, which is loaded by [Steve Purcell's
+Emacs](https://github.com/purcell/emacs.d).  
+
+Perhaps one of my biggest
+dotfiles mistakes was to attempt to start from 
+scratch on my on emacs dotfiles without any experience with emacs
+or any idea of what a good emacs config should feel like.  This pretty
+much delayed me using emacs by like two years.  My keybindings configs
+were all non-standard, so that was another barrier to entry for me.
+
+Eventually, i will incorporate some of the ideas of my own
+`emacs.d` into `init-local.el` and better structure the files loaded
+from it.  Some of my emacs ideas weren't too bad, but most were not
+unique, they were non-standard and they cost me a lot of time.  
+
+On the other hand, i often wonder how secure it is to load all this
+untrusted code from some rando's dotfiles on the internet. But
+what are you gonna do. Most of these dotfiles and configs available
+online and many of the convenience apps available have a potential
+to open glaring vulnerabilities if not configured properly.  Not that
+these people are out to get you of course.  I just wonder how much
+attackable surface area opens because of scripts like `powerline` and
+other shiny tools.  No offense. 
+
+
 **Note: the keybindings in this file are mostly standard emacs keys and not up to date**
 
 To Learn
