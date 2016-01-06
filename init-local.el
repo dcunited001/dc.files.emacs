@@ -33,6 +33,9 @@
 (setq synonyms-file "~/.files/mthesaur.txt")
 (setq synonyms-cache-file "~/.files/mthesaur.cache")
 (require-package 'synonyms)
+(require 'synonyms)
+
+(global-set-key (kbd "H-t") 'synonyms)
 
 ;; ==========================================
 ;; markdown Mode
