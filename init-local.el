@@ -14,7 +14,9 @@
 
 (setq default-tab-width 2)
 
-(set-frame-font "DejaVu Sans Mono for Powerline" t t)
+(if (eq system-type 'darwin)
+    (set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
+  (set-frame-font "DejaVu Sans Mono for Powerline" t t))
 
 ;; TODO: config init files
 ;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
@@ -30,8 +32,8 @@
 ;;(require-package 'synosaurus)
 
 ;; http://www.emacswiki.org/emacs/Synonyms#toc3
-(setq synonyms-file "~/.files/mthesaur.txt")
-(setq synonyms-cache-file "~/.files/mthesaur.cache")
+(setq synonyms-file "~/.files/emacs/mthesaur.txt")
+(setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
 (require-package 'synonyms)
 (require 'synonyms)
 
@@ -40,6 +42,9 @@
 ;; ==========================================
 ;; markdown Mode
 ;; ==========================================
+(defun setup-markdown-mode
+    ;;(synosaurus-mode)
+    (synonyms-mode))
 
 ;; NOTE: can't figure out how to load synonyms-mode
 ;; - without overriding markdown mode (since it's a major mode)
