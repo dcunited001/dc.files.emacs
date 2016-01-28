@@ -14,9 +14,19 @@
 
 (setq default-tab-width 2)
 
+(defun correct-linux-font (size)
+  (set-face-attribute
+   'default nil
+   :font (font-spec
+          :name "-unknown-DejaVu Sans Mono for Powerline-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"
+          :size size)))
+
 (if (eq system-type 'darwin)
     (set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
-  (set-frame-font "DejaVu Sans Mono for Powerline" t t))
+  (correct-linux-font 22))
+
+;;(set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
+;;-unknown-DejaVu Sans Mono for Powerline-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1
 
 ;; TODO: config init files
 ;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
@@ -32,6 +42,8 @@
 ;;(require-package 'synosaurus)
 
 ;; http://www.emacswiki.org/emacs/Synonyms#toc3
+
+
 (setq synonyms-file "~/.files/emacs/mthesaur.txt")
 (setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
 (require-package 'synonyms)
