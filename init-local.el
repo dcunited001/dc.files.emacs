@@ -38,6 +38,12 @@
 
 ;;(require-package 'icicles)
 
+;; ==========================================
+;; Thesaurus/Dictionary
+;; ==========================================
+
+(ispell-change-dictionary "english")
+
 ;; synosaurus requires wn command line tool
 ;;(require-package 'synosaurus)
 
@@ -56,7 +62,7 @@
 ;; ==========================================
 (defun setup-markdown-mode
     ;;(synosaurus-mode)
-    (synonyms-mode))
+    (flyspell-mode))
 
 ;; NOTE: can't figure out how to load synonyms-mode
 ;; - without overriding markdown mode (since it's a major mode)
@@ -69,8 +75,12 @@
 ;;(icy-mode)
 ;; (synonyms-mode))
 
-;; (add-hook 'markdown-mode-hook
-;; 'setup-markdown-mode)
+(add-hook 'markdown-mode-hook
+          'setup-markdown-mode)
+
+;; TODO: remove trailing whitespace
+;;(lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace))
+
 
 ;; (autoload 'markdown-mode "markdown-mode"
 ;; "Major mode for editing Markdown files" t)
