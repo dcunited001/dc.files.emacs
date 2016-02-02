@@ -56,13 +56,15 @@
 (require 'synonyms)
 
 (global-set-key (kbd "H-t") 'synonyms)
+;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
 
 ;; ==========================================
 ;; markdown Mode
 ;; ==========================================
-(defun setup-markdown-mode
-    ;;(synosaurus-mode)
-    (flyspell-mode))
+(defun setup-markdown-mode ()
+  ;;(synosaurus-mode)
+  (flyspell-mode)
+  (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 ;; NOTE: can't figure out how to load synonyms-mode
 ;; - without overriding markdown mode (since it's a major mode)
@@ -72,22 +74,19 @@
 ;; synosaurus mode requires sn cmd line tool
 ;; icicles mode needs to load before synonyms
 ;; (defun setup-markdown-mode
-;;(icy-mode)
+;; (icy-mode)
 ;; (synonyms-mode))
 
 (add-hook 'markdown-mode-hook
           'setup-markdown-mode)
 
 ;; TODO: remove trailing whitespace
-;;(lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace))
-
 
 ;; (autoload 'markdown-mode "markdown-mode"
 ;; "Major mode for editing Markdown files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (provide 'init-local)
-
 
 ;; TODO: mac fullscreen
 ;; TODO: mac initialization file
