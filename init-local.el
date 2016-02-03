@@ -12,6 +12,21 @@
 ;; - ample-zen
 ;; - noctilux
 
+;;; CODE:
+
+;; ==========================================
+;; Env configs
+;; ==========================================
+
+(set 'dotfiles-home (file-name-as-directory "~/.files"))
+(set 'dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
+(set 'dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
+
+
+;; ==========================================
+;; Formatting
+;; ==========================================
+
 (setq default-tab-width 2)
 
 (defun correct-linux-font (size)
@@ -31,6 +46,14 @@
 ;; TODO: config init files
 ;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
 ;; (require 'config-Markdown)
+
+;; ==========================================
+;; Load specific configs
+;; ==========================================
+(add-to-list 'load-path dotfiles-elisp)
+(require 'config-ruby)
+;;TODO: move markdown config
+;;TODO: load keyboard config
 
 ;; ==========================================
 ;; Load libs
@@ -56,12 +79,14 @@
 (require 'synonyms)
 
 (global-set-key (kbd "H-t") 'synonyms)
+(global-set-key (kbd "H-s") 'ispell-word)
 ;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
 
 ;; ==========================================
 ;; markdown Mode
 ;; ==========================================
 (defun setup-markdown-mode ()
+  "Configures markdown mode."
   ;;(synosaurus-mode)
   (flyspell-mode)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
