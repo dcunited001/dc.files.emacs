@@ -2,3 +2,4 @@ bindkeys.el
 bindkeys.emacs.json
 custom.el
 flycheck-custom.el
+mthesaur.cache
