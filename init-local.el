@@ -89,6 +89,7 @@
   "Configures markdown mode."
   ;;(synosaurus-mode)
   (flyspell-mode)
+  (turn-on-auto-fill)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 ;; NOTE: can't figure out how to load synonyms-mode
