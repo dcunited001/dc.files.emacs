@@ -22,26 +22,14 @@
 (set 'dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
 (set 'dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
 
-
 ;; ==========================================
 ;; Formatting
 ;; ==========================================
 
 (setq default-tab-width 2)
 
-(defun correct-linux-font (size)
-  (set-face-attribute
-   'default nil
-   :font (font-spec
-          :name "-unknown-DejaVu Sans Mono for Powerline-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"
-          :size size)))
-
-(if (eq system-type 'darwin)
-    (set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
-  (correct-linux-font 22))
-
-;;(set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
-;;-unknown-DejaVu Sans Mono for Powerline-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1
+(cond ((eq system-type 'darwin) (require 'config-darwin))
+      ((eq system-type 'gnu/linux) (require 'config-linux)))
 
 ;; TODO: config init files
 ;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
