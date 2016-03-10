@@ -22,14 +22,13 @@
 (set 'dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
 (set 'dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
 
+(add-to-list 'load-path dotfiles-elisp)
+
 ;; ==========================================
 ;; Formatting
 ;; ==========================================
 
 (setq default-tab-width 2)
-
-(cond ((eq system-type 'darwin) (require 'config-darwin))
-      ((eq system-type 'gnu/linux) (require 'config-linux)))
 
 ;; TODO: config init files
 ;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
@@ -38,8 +37,13 @@
 ;; ==========================================
 ;; Load specific configs
 ;; ==========================================
-(add-to-list 'load-path dotfiles-elisp)
+
+(cond ((eq system-type 'darwin) (require 'config-darwin))
+      ((eq system-type 'gnu/linux) (require 'config-linux)))
+
 (require 'config-ruby)
+(require 'config-swift)
+
 ;;TODO: move markdown config
 ;;TODO: load keyboard config
 
