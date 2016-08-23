@@ -95,6 +95,10 @@
 ;; (icy-mode)
 ;; (synonyms-mode))
 
+;; set kramdown as default
+
+(setq markdown-command "kramdown")
+
 (add-hook 'markdown-mode-hook
           'setup-markdown-mode)
 
