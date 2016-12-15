@@ -28,6 +28,7 @@
 ;; Formatting
 ;; ==========================================
 
+(setq-default tab-width 2)
 (setq default-tab-width 2)
 
 ;; TODO: config init files
@@ -43,6 +44,7 @@
 
 (require 'config-ruby)
 (require 'config-swift)
+(require 'bindkeys)
 
 ;;TODO: move markdown config
 ;;TODO: load keyboard config

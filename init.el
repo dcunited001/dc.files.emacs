@@ -97,19 +97,18 @@
 ;;==============================;;
 ;; PERSONAL SCRIPTS
 ;;==============================;;
-; no longer want these files to be loaded automatically
-;   they seem to be loaded inconsistently
-(load "~/.emacs.d/personal/support/auto-complete.el")
-;;(load "~/.emacs.d/personal/support/ess.el")
-;;(load "~/.emacs.d/personal/support/prelude.el")
-(load "~/.emacs.d/personal/support/rails.el")
-(load "~/.emacs.d/personal/support/node.el")
-;(load "~/.emacs.d/personal/support/xiki.el")
-(load "~/.emacs.d/personal/support/clojure.el")
-(load "~/.emacs.d/personal/support/bindkeys.el")
-(load "~/.emacs.d/personal/support/haskell.el")
-(load "~/.emacs.d/personal/support/emacs-lisp.el")
-(load "~/.emacs.d/personal/support/markdown.el")
+                                        ; no longer want these files to be loaded automatically
+                                        ;   they seem to be loaded inconsistently
+
+;; ** (load "~/.emacs.d/personal/support/ess.el")
+                                        ;(load "~/.emacs.d/personal/support/auto-complete.el")
+                                        ;(load "~/.emacs.d/personal/support/rails.el")
+                                        ;(load "~/.emacs.d/personal/support/node.el")
+                                        ;(load "~/.emacs.d/personal/support/clojure.el")
+                                        ;(load "~/.emacs.d/personal/support/bindkeys.el")
+                                        ;(load "~/.emacs.d/personal/support/haskell.el")
+                                        ;(load "~/.emacs.d/personal/support/emacs-lisp.el")
+                                        ;(load "~/.emacs.d/personal/support/markdown.el")
 
 ;;==============================;;
 ;; MAGIT
