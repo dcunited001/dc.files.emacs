@@ -14,15 +14,13 @@
 
 ;;; CODE:
 
-(set 'custom-scratch-msg [])
+(setq custom-scratch-border "
 
-(set 'custom-scratch-border "
-
-...............................................................................
-.  ,       __/`    \__   __/         ,_  Lo    /\\_Fo   o     o/         \o   .
-.  \__\o  '  \o   \/_   o\/   o/__/`   \/      ,-       /\   √|   ∂≈__    |√  .
-.   ) |      ( \  o      /    /  (     (  `-.-'          (   / )  √˚ L\  ( \  .
-...............................................................................
+;;;                                                                   ;;;
+;;;   ,       __/`    \__   __/         ,_  Lo    /\\_Fo   o     o/   ;;;
+;;;   \__\o  '  \o   \/_   o\/   o/__/`   \/      ,-       /\   √|    ;;;
+;;;    ) |      ( \  o      /    /  (     (  `-.-'          (   ( \   ;;;
+;;; ................................................................. ;;;
 
 ")
 
@@ -30,39 +28,50 @@
 ;;;
 ;;; (cons 'msg-scratch-keys "" )
 ;;;
+
+(setq
+ custom-scratch-msg
+ '(
 ;;;___MSG
-(cons 'custom-scratch-msg "(kbd \"C-h m\") => Help for current mode" )
-(cons 'custom-scratch-msg "(kbd \"C-h m\") => Display all key bindings for current mode" )
+   "(kbd \"C-h m\") => Help for current mode"
+   "(kbd \"C-h m\") => Display all key bindings for current mode"
 
 ;;;___LEARN
+   "Learn to use (apropos) to select lists of commands w/ short description to collect"
+   "Filter/Sort apropos output to display the commands with mapped keys or by usage stats"
+   ))
 
-
-(setq initial-scratch-message (s/join msg-list custom-scratch-border custom-scratch-msg))
+(setq initial-scratch-message (reduce (lambda (a i) (concat a "\n" i)) custom-scratch-msg :initial-value ""))
 
 ;; ==========================================
 ;; Env configs
 ;; ==========================================
 
-(set 'dotfiles-home (file-name-as-directory "~/.files"))
-(set 'dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
-(set 'dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
+(setq dotfiles-home (file-name-as-directory "~/.files"))
+(setq dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
+(setq dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
 
 (add-to-list 'load-path dotfiles-elisp)
 
-(defun reload-init []
-  "Reload $DFE/supporl/init-local.el"
-  ((interactive)
-   (load-file "init-local.el")))
+(defun reload-init ()
+  "Reload $DFE/init-local.el"
+  (interactive)
+  (load-file "init-local.el"))
+
+(defun reload-init-all ()
+  "Reload $DFE/init-local.el"
+  (interactive)
+  (load-file "init.el"))
 
 ;; ==========================================
 ;; Formatting
 ;; ==========================================
 
-(setq-default tab-width 2)
+(setq default-tab-width 2)
 (setq default-tab-width 2)
 
 ;; TODO: config init files
-;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))
+;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))l
 ;; (require 'config-Markdown)
 
 ;; ==========================================
@@ -107,7 +116,7 @@
 ;; ==========================================
 ;; markdown Mode
 ;; ==========================================
-(defun setup-markdown-mode ()
+(defun setup-markdown-mode []
   "Configures markdown mode."
   ;;(synosaurus-mode)
   (flyspell-mode)
@@ -139,6 +148,3 @@
 ;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (provide 'init-local)
-
-;; TODO: mac fullscreen
-;; TODO: mac initialization file
