@@ -14,6 +14,31 @@
 
 ;;; CODE:
 
+(set 'custom-scratch-msg [])
+
+(set 'custom-scratch-border "
+
+...............................................................................
+.  ,       __/`    \__   __/         ,_  Lo    /\\_Fo   o     o/         \o   .
+.  \__\o  '  \o   \/_   o\/   o/__/`   \/      ,-       /\   √|   ∂≈__    |√  .
+.   ) |      ( \  o      /    /  (     (  `-.-'          (   / )  √˚ L\  ( \  .
+...............................................................................
+
+")
+
+;;; run `emali'
+;;;
+;;; (cons 'msg-scratch-keys "" )
+;;;
+;;;___MSG
+(cons 'custom-scratch-msg "(kbd \"C-h m\") => Help for current mode" )
+(cons 'custom-scratch-msg "(kbd \"C-h m\") => Display all key bindings for current mode" )
+
+;;;___LEARN
+
+
+(setq initial-scratch-message (s/join msg-list custom-scratch-border custom-scratch-msg))
+
 ;; ==========================================
 ;; Env configs
 ;; ==========================================
@@ -23,6 +48,11 @@
 (set 'dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
 
 (add-to-list 'load-path dotfiles-elisp)
+
+(defun reload-init []
+  "Reload $DFE/supporl/init-local.el"
+  ((interactive)
+   (load-file "init-local.el")))
 
 ;; ==========================================
 ;; Formatting
@@ -72,8 +102,6 @@
 (require-package 'synonyms)
 (require 'synonyms)
 
-(global-set-key (kbd "H-t") 'synonyms)
-(global-set-key (kbd "H-s") 'ispell-word)
 ;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
 
 ;; ==========================================
