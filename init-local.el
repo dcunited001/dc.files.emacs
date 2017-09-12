@@ -41,7 +41,7 @@
    "Filter/Sort apropos output to display the commands with mapped keys or by usage stats"
    ))
 
-(setq initial-scratch-message (reduce (lambda (a i) (concat a "\n" i)) custom-scratch-msg :initial-value ""))
+(setq initial-scratch-message (reduce (lambda (a i) (concat a custom-scratch-border i)) custom-scratch-msg :initial-value ""))
 
 ;; ==========================================
 ;; Env configs
@@ -119,6 +119,7 @@
 (defun setup-markdown-mode []
   "Configures markdown mode."
   ;;(synosaurus-mode)
+  (writegood-mode)
   (flyspell-mode)
   (turn-on-auto-fill)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
