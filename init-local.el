@@ -14,6 +14,8 @@
 
 ;;; CODE:
 
+
+;;; TODO: figure out how to get slashes to not disappear
 (setq custom-scratch-border "
 
 ;;;                                                                   ;;;
@@ -21,7 +23,6 @@
 ;;;   \__\o  '  \o   \/_   o\/   o/__/`   \/      ,-       /\   √|    ;;;
 ;;;    ) |      ( \  o      /    /  (     (  `-.-'          (   ( \   ;;;
 ;;; ................................................................. ;;;
-
 ")
 
 ;;; run `emali'
@@ -33,46 +34,46 @@
  custom-scratch-msg
  '(
 ;;;___MSG
-   "(kbd \"C-h m\") => Help for current mode"
-   "(kbd \"C-h m\") => Display all key bindings for current mode"
+   "#### Keyboard mappings to learn:"
+   ""
+   "  (kbd \"C-h m\") => Help for current mode"
+   "  (kbd \"C-h m\") => Display all key bindings for current mode"
 
 ;;;___LEARN
-   "Learn to use (apropos) to select lists of commands w/ short description to collect"
-   "Filter/Sort apropos output to display the commands with mapped keys or by usage stats"
+   "#### Misc Techs to Learn"
+   ""
+   "- Learn to use (apropos) to select lists of commands w/ short description to collect"
+   "- Filter/Sort apropos output to display the commands with mapped keys or by usage stats"
    ))
 
-(setq initial-scratch-message (reduce (lambda (a i) (concat a custom-scratch-border i)) custom-scratch-msg :initial-value ""))
+(setq initial-scratch-message (reduce (lambda (a i) (concat a "\n" i)) custom-scratch-msg :initial-value custom-scratch-border))
 
 ;; ==========================================
 ;; Env configs
 ;; ==========================================
 
-(setq dotfiles-home (file-name-as-directory "~/.files"))
-(setq dotfiles-emacs (concat (file-name-as-directory dotfiles-home) "emacs"))
-(setq dotfiles-elisp (concat (file-name-as-directory dotfiles-emacs) "support"))
+(defvar dotfiles-home
+  (file-name-as-directory "~/.files")
+  "Stores dotfiles path (default: ~/.files)")
+(defvar dotfiles-emacs
+     (concat (file-name-as-directory dotfiles-home) "emacs")
+     "Stores emacs path (default: ~/.files/emacs)")
+(defvar dotfiles-elisp
+     (concat (file-name-as-directory dotfiles-emacs) "support")
+     "Stores emacs support path (default: ~/.files/emacs/support)")
+
 
 (add-to-list 'load-path dotfiles-elisp)
 
 (defun reload-init ()
   "Reload $DFE/init-local.el"
   (interactive)
-  (load-file "init-local.el"))
+  (load-file (concat dotfiles-emacs "/init-local.el")))
 
 (defun reload-init-all ()
   "Reload $DFE/init-local.el"
   (interactive)
-  (load-file "init.el"))
-
-;; ==========================================
-;; Formatting
-;; ==========================================
-
-(setq default-tab-width 2)
-(setq default-tab-width 2)
-
-;; TODO: config init files
-;; (add-to-list 'load-path (expand-file-name "~/.files/emacs/support"))l
-;; (require 'config-Markdown)
+  (load-file (concat dotfiles-emacs "/init.el")))
 
 ;; ==========================================
 ;; Load specific configs
@@ -83,6 +84,8 @@
 
 (require 'config-ruby)
 (require 'config-swift)
+(require 'config-markdown)
+
 (require 'bindkeys)
 
 ;;TODO: move markdown config
@@ -95,57 +98,10 @@
 ;;(require-package 'icicles)
 
 ;; ==========================================
-;; Thesaurus/Dictionary
+;; Formatting
 ;; ==========================================
 
-(ispell-change-dictionary "english")
-
-;; synosaurus requires wn command line tool
-;;(require-package 'synosaurus)
-
-;; http://www.emacswiki.org/emacs/Synonyms#toc3
-
-
-(setq synonyms-file "~/.files/emacs/mthesaur.txt")
-(setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
-(require-package 'synonyms)
-(require 'synonyms)
-
-;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
-
-;; ==========================================
-;; markdown Mode
-;; ==========================================
-(defun setup-markdown-mode []
-  "Configures markdown mode."
-  ;;(synosaurus-mode)
-  (writegood-mode)
-  (flyspell-mode)
-  (turn-on-auto-fill)
-  (add-to-list 'write-file-functions 'delete-trailing-whitespace))
-
-;; NOTE: can't figure out how to load synonyms-mode
-;; - without overriding markdown mode (since it's a major mode)
-;; - and without screwing up the undo data for the buffer
-;; - and for some reason `synonyms` command is not available unless major mode is loaded
-
-;; synosaurus mode requires sn cmd line tool
-;; icicles mode needs to load before synonyms
-;; (defun setup-markdown-mode
-;; (icy-mode)
-;; (synonyms-mode))
-
-;; set kramdown as default
-
-(setq markdown-command "kramdown")
-
-(add-hook 'markdown-mode-hook
-          'setup-markdown-mode)
-
-;; TODO: remove trailing whitespace
-
-;; (autoload 'markdown-mode "markdown-mode"
-;; "Major mode for editing Markdown files" t)
-;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(setq default-tab-width 2)
+(setq tab-width 2)
 
 (provide 'init-local)

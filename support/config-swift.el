@@ -4,9 +4,10 @@
 
 ;;; Code:
 (require-package 'swift-mode)
+
 ;; i checked the docs, flycheck-checkers definitely should exist
 ;;(add-to-list 'flycheck-checkers 'swift)
 
 (provide 'config-swift)
 
-;;; config-ruby.el ends here
+;;; config-swift.el ends here

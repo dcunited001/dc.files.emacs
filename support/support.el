@@ -109,19 +109,19 @@
 
 ;; Interactive change of code style in ALL buffers to GNU
 (defun set-code-style-gnu () (interactive)
-  "Set all buffers to GNU-style"
-  (setq c-default-style '((other . "gnu")))  ;; C Style GNU-based
-  (setq-default tab-width 4                  ;; Tab width: 4 whitespaces
-                indent-tabs-mode nil         ;; Disable tabs, always whitespaces
-                c-basic-offset 2))           ;; C basic offset: 2 whitespaces
+       "Set all buffers to GNU-style"
+       (setq c-default-style '((other . "gnu")))  ;; C Style GNU-based
+       (setq-default tab-width 2                  ;; Tab width: 4 whitespaces
+                     indent-tabs-mode nil         ;; Disable tabs, always whitespaces
+                     c-basic-offset 2))           ;; C basic offset: 2 whitespaces
 
 ;; Interactive change of code style in ALL buffers to Devhelp
 (defun set-code-style-devhelp () (interactive)
-  "Set all buffers to Devhelp-style"
-  (setq c-default-style '((other . "bsd")))  ;; C Style BSD-based
-  (setq-default tab-width 8                  ;; Tab width: 8 whitespaces
-                indent-tabs-mode nil         ;; Disable tabs, always whitespaces
-                c-basic-offset 8))           ;; C basic offset: 8 whitespaces
+       "Set all buffers to Devhelp-style"
+       (setq c-default-style '((other . "bsd")))  ;; C Style BSD-based
+       (setq-default tab-width 2                 ;; Tab width: 8 whitespaces
+                     indent-tabs-mode nil         ;; Disable tabs, always whitespaces
+                     c-basic-offset 2))           ;; C basic offset: 8 whitespaces
 
 ;; Interactive change of code style in ALL buffers to Gnome Tracker
 (defun set-code-style-tracker () (interactive)
