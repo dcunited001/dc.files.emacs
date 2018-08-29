@@ -68,7 +68,7 @@
 ;; (load-theme 'tango-dark t)
 ;; (load-theme 'wombat t)
 ;; (load-theme 'solarized-dark t)
-(load-theme 'zenburn t) ;; config'd with rainbow delimiters
+;; (load-theme 'zenburn t) ;; config'd with rainbow delimiters
 
 ;;==============================;;
 ;; TWITTERING-MODE

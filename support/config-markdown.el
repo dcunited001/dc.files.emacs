@@ -8,6 +8,7 @@
 ;; Thesaurus/Dictionary
 ;; ==========================================
 
+(setq ispell-program-name "aspell")
 (ispell-change-dictionary "english")
 
 ;; synosaurus requires wn command line tool
@@ -26,11 +27,11 @@
 ;; ==========================================
 ;; markdown Mode
 ;; ==========================================
-(defun setup-markdown-mode []
+(defun setup-markdown-mode ()
   "Configures markdown mode."
   ;;(synosaurus-mode)
-  (writegood-mode)
-  (flyspell-mode)
+  ;;(writegood-mode)
+  ;;(flyspell-mode)
   (turn-on-auto-fill)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
@@ -56,9 +57,8 @@
 
 ;; (autoload 'markdown-mode "markdown-mode"
 ;; "Major mode for editing Markdown files" t)
-;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)) 
+;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (provide 'config-markdown)
-
 
 ;;; config-markdown.el ends here
