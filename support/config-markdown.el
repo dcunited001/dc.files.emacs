@@ -5,17 +5,30 @@
 ;;; Code:
 
 ;; ==========================================
+;; Syntactical Highlighting (OSX Only)
+;; ==========================================
+
+;; ==========================================
 ;; Thesaurus/Dictionary
 ;; ==========================================
 
 (setq ispell-program-name "aspell")
 (ispell-change-dictionary "english")
 
-;; synosaurus requires wn command line tool
+;; TODO: configure WordNut
+
+;; (eval-after-load "autocomplete"
+;;   '(progn
+;;      (ac-ispell-setup)))
+
+;; to integrate autocompletion with ispell
+;; (add-hook 'markdown-mode-hook
+;; 'ac-ispell-ac-setup)
+
+;; synosaurus requires wn command line tool'''
 ;;(require-package 'synosaurus)
 
 ;; http://www.emacswiki.org/emacs/Synonyms#toc3
-
 
 (setq synonyms-file "~/.files/emacs/mthesaur.txt")
 (setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
@@ -25,7 +38,7 @@
 ;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
 
 ;; ==========================================
-;; markdown Mode
+;; Markdown Mode
 ;; ==========================================
 (defun setup-markdown-mode ()
   "Configures markdown mode."
