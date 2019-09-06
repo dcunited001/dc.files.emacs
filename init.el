@@ -43,7 +43,8 @@
                       rbenv
                       paredit
                       synosaurus
-))
+                      avy
+                      ))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
