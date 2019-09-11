@@ -11,6 +11,7 @@
 (set-frame-font "DejaVu Sans Mono for Powerline" 14 t)
 
 (setq ns-control-modifier 'super)
+(setq ns-right-control-modifier 'control)
 (setq ns-command-modifier 'control)
 (setq ns-alternate-modifier 'meta)
 (setq ns-right-alternate-modifier 'alt)
