@@ -36,6 +36,7 @@
 ;;;___MSG
    "#### Keyboard mappings to learn:"
    ""
+   "  (kbd \"C-h o\") => (describe-symbol) Go to symbol definition"
    "  (kbd \"C-h m\") => Help for current mode"
    "  (kbd \"C-h m\") => Display all key bindings for current mode"
 
