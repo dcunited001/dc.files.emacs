@@ -1,49 +1,130 @@
 ;; to automatically install packages:
 ;; (load "~/.emacs.d/personal/support/install.el")
 
+;;==============================;;
+;; Init.el (this file isn't loaded by emacs ... use init-local.el 2019/9/16)
+;;==============================;;
+
 ;; load support functions
 (load "~/.emacs.d/personal/support/support.el")
 (require 'json)
 (require 'auto-complete)
 ;; add marmalade archive
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
 
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode
-                      nrepl  ;; not found on last setup - install via list-packages
-                      nrepl-ritz
-                      ac-nrepl
-                      rvm
-                      rinari
-                      ess
-                      yasnippet
-                      twittering-mode
+(defvar my-packages '(
+                      auto-complete
+                      
+                      ;; helm
+                      helm
+                      helm-wordnet
+                      helm-unicode
+                      helm-taskswitch
+                      helm-swoop
+                      helm-rage
+                      helm-make
+                      helm-ispell
+                      helm-descbinds
+                      helm-commandlinefu
+                      helm-emmet
+                      helm-flycheck
+
+                      ;; search/jump
+                      avy
+                      avy-flycheck
+                      ace-isearch
+                      link-hint
+                      avy-flycheck
+                      ace-isearch
+                      ace-flyspell
+
+
+                      ;; flycheck
+                      flycheck-yamllint
+                      flycheck-inline
+                      flycheck-indicator
+                      flycheck-dtrace dtrace-script-mode
+                      flycheck-css-colorgaurd
+                      flycheck-plantuml
+
+                      ;; REST
+                      rest-client
+                      rest-client-helm
+
+                      ;; imenu
+                      imenus
+                      imenu-list
+                      imenu-anywhere
+
+                      ;; aesthetic
+                      powerline
+                      look-mode
+                      dimmer
+                      
+                      ;; misc
+                      ;; ess
                       ack
                       aes
                       bundler
                       bitly
                       cmake-mode
-                      coffee-mode
-                      db-pg
                       gnugo
                       spaces
-                      sml-mode
                       slime
-                      scss-mode
-                      sass-mode
+                      plantuml-mode
+
+                      ;; ruby
+                      ruby-moed
                       ruby-test-mode
-                      ruby-mode
                       ruby-compilation
-                      json
-                      auto-complete
-                      clojure-cheatsheet
                       rbenv
+                      rvm
+                      rinari
                       paredit
                       synosaurus
                       avy
+
+                      ;; makefiles
+                      makefile-executor
+                      
+                      ;; web
+                      emmet-mode
+
+                      ;; js/ts
+                      typescript-mode
+
+                      ;; python
+                      python
+                      python-mode
+                      ;; ein ;; (jupyter integration)
+                      pyenv
+
+                      ;; markdown
+                      mw-thesaurus
+                      ;; synonyms
+
+                      ;; snippets
+                      yasnippet
+                      yasnippet-snippets
+                      react-snippets
+                      mocha-snippets
+                      js-react-redux-yasnippets
+                      helm-c-yasnippet
+                      
+                      ;;clojure-mode
+                      ;; clojure-cheatsheet
+                      ;; clojure
+                      ;; nrepl  ;; not found on last setup - install via list-packages
+                      ;; nrepl-ritz
+                      ;; ac-nrepl
+                      ;; twittering-mode
                       ))
 
 (dolist (p my-packages)
@@ -53,7 +134,7 @@
 ;;==============================;;
 ;; ENV INFO
 ;;==============================;;
-;; this var needs to be set in order for os-specific keys to be applied 
+;; this var needs to be set in order for os-specific keys to be applied
 (setq emos (getenv "OS_TYPE"))
 
 ;;==============================;;
@@ -77,19 +158,13 @@
 ;; once this is configured, no need to authorize every time
 ;;  but where is the password stored?
 
-(eval-after-load 'twittering-mode
-  (progn (setq twittering-icon-mode t)
-         (setq twittering-use-master-password t)))
+;; (eval-after-load 'twittering-mode
+;; (progn (setq twittering-icon-mode t)
+;; (setq twittering-use-master-password t)))
 
 ;;==============================;;
 ;; ERGOEMACS
 ;;==============================;;
-;;  http://ergoemacs.org/emacs/keystroke_rep.html
-
-; (setq ergoemacs-theme nil)
-; (setq ergoemacs-keyboard-layout "us")
-; (ergoemacs-mode 1)
-
 (defun ergoemacs-print-buffer-confirm ()
   "overwrite the ergoemacs function to re-remap the C-p to hyper"
   (interactive)
