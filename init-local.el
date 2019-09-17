@@ -87,7 +87,8 @@
 (require 'config-ruby)
 (require 'config-swift)
 (require 'config-markdown)
-
+(ido-mode -1)
+(ido-everywhere -1)
 (require 'bindkeys)
 
 ;;TODO: move markdown config
