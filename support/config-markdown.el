@@ -7,33 +7,27 @@
 ;; ==========================================
 ;; Syntactical Highlighting (OSX Only)
 ;; ==========================================
-
-;; ==========================================
-;; Thesaurus/Dictionary
-;; ==========================================
-
 (setq ispell-program-name "aspell")
 (ispell-change-dictionary "english")
-
-;; TODO: configure WordNut
 
 ;; (eval-after-load "autocomplete"
 ;;   '(progn
 ;;      (ac-ispell-setup)))
 
-;; to integrate autocompletion with ispell
-;; (add-hook 'markdown-mode-hook
-;; 'ac-ispell-ac-setup)
+;; ==========================================
+;; Thesaurus (mw or synonyms)
+;; ==========================================
 
-;; synosaurus requires wn command line tool'''
-;;(require-package 'synosaurus)
+;;(print (getenv "API_MW_THESAURUS_KEY"))
+;; TODO: set API key
+(if (getenv "API_MW_THESAURUS_KEY")
+    (setq mw-thesaurus--api-key (getenv "API_MW_THESAURUS_KEY")))
 
+;; (setq synonyms-file "~/.files/emacs/mthesaur.txt")
+;; (setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
+;; (require-package 'synonyms)
+;; (require 'synonyms)
 ;; http://www.emacswiki.org/emacs/Synonyms#toc3
-
-(setq synonyms-file "~/.files/emacs/mthesaur.txt")
-(setq synonyms-cache-file "~/.files/emacs/mthesaur.cache")
-(require-package 'synonyms)
-(require 'synonyms)
 
 ;;(global-set-key (kbd "H-w") 'delete-trailing-whitespace)
 
