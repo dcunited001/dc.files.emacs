@@ -11,6 +11,10 @@
 ;; - ample
 ;; - ample-zen
 ;; - noctilux
+;; - cyberpunk2019
+;; - moe
+;; - monokai
+;; - arc-dark
 
 ;;; CODE:
 
@@ -24,6 +28,9 @@
 ;;;    ) |      ( \  o      /    /  (     (  `-.-'          (   ( \   ;;;
 ;;; ................................................................. ;;;
 ")
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;;; run `emali'
 ;;;
@@ -89,6 +96,7 @@
 (require 'config-markdown)
 (ido-mode -1)
 (ido-everywhere -1)
+(require 'config-helm)
 (require 'bindkeys)
 
 ;;TODO: move markdown config
@@ -100,11 +108,32 @@
 
 ;;(require-package 'icicles)
 
+
+;; ==========================================
+;; Makefile
+;; ==========================================
+
+(use-package makefile-executor
+  :config
+  (add-hook 'makefile-mode-hook 'makefile-executor-mode))
+
 ;; ==========================================
 ;; Formatting
 ;; ==========================================
 
 (setq default-tab-width 2)
 (setq tab-width 2)
+
+;; ==========================================
+;; Aesthetic/Misc
+;; ==========================================
+(dimmer-mode)
+
+;; ==========================================
+;; Avy/Ace
+;; ==========================================
+(avy-setup-default)
+(global-set-key (kbd "C-c C-j") 'avy-resume)
+
 
 (provide 'init-local)

@@ -3,7 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
-(require-package 'rinari)
+;;(require-package 'rinari)
 
 (provide 'config-ruby)
 
