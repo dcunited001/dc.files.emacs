@@ -22,9 +22,9 @@
 (defvar my-packages '(
                       auto-complete
                       
-                      ;; helm
+                      ;; helm (done)
                       helm
-                      helm-wordnet
+                      helm-utils
                       helm-unicode
                       helm-taskswitch
                       helm-swoop
@@ -32,21 +32,23 @@
                       helm-make
                       helm-ispell
                       helm-descbinds
+                      helm-wordnet
                       helm-commandlinefu
                       helm-emmet
                       helm-flycheck
 
                       ;; search/jump
+                      ;; TODO:
                       avy
                       avy-flycheck
                       ace-isearch
                       link-hint
                       avy-flycheck
-                      ace-isearch
                       ace-flyspell
 
 
                       ;; flycheck
+                      ;; TODO:
                       flycheck-yamllint
                       flycheck-inline
                       flycheck-indicator
@@ -54,16 +56,17 @@
                       flycheck-css-colorgaurd
                       flycheck-plantuml
 
-                      ;; REST
+                      ;; REST (done)
                       rest-client
                       rest-client-helm
 
                       ;; imenu
+                      ;; TODO;
                       imenus
                       imenu-list
                       imenu-anywhere
 
-                      ;; aesthetic
+                      ;; aesthetic (done)
                       powerline
                       look-mode
                       dimmer
@@ -78,9 +81,9 @@
                       gnugo
                       spaces
                       slime
-                      plantuml-mode
+                      plantuml-mode ;; TODO: plantuml-mode
 
-                      ;; ruby
+                      ;; TODO: ruby
                       ruby-moed
                       ruby-test-mode
                       ruby-compilation
@@ -91,32 +94,32 @@
                       synosaurus
                       avy
 
-                      ;; makefiles
+                      ;; TODO: makefiles
                       makefile-executor
                       
-                      ;; web
+                      ;; TODO: web
                       emmet-mode
 
-                      ;; js/ts
+                      ;; TODO: js/ts
                       typescript-mode
 
-                      ;; python
+                      ;; TODO: python
                       python
                       python-mode
                       ;; ein ;; (jupyter integration)
                       pyenv
 
-                      ;; markdown
-                      mw-thesaurus
+                      ;; TODO: markdown (margins, headers, imenu)
+                      mw-thesaurus ;; (done)
                       ;; synonyms
 
-                      ;; snippets
+                      ;; TODO snippets
                       yasnippet
                       yasnippet-snippets
                       react-snippets
                       mocha-snippets
                       js-react-redux-yasnippets
-                      helm-c-yasnippet
+                      helm-c-yasnippet ;; (done)
                       
                       ;;clojure-mode
                       ;; clojure-cheatsheet

@@ -108,7 +108,6 @@
 
 ;;(require-package 'icicles)
 
-
 ;; ==========================================
 ;; Makefile
 ;; ==========================================
@@ -127,13 +126,29 @@
 ;; ==========================================
 ;; Aesthetic/Misc
 ;; ==========================================
+(require 'powerline)
+(powerline-default-theme)
 (dimmer-mode)
+
+;; ==========================================
+;; Yasnippet
+;; ==========================================
+;; https://www.emacswiki.org/emacs/Yasnippet#toc6
+(setq helm-yas-space-match-any-greedy t)
+(yas-global-mode 1)
+
+;; TODO: config snippets
+;; (yas-load-directory "<path>/<to>/snippets/")
+;; (setq yas-snippet-dirs
+;;       '("~/.emacs.d/snippets"                 ;; personal snippets
+;;         "/path/to/some/collection/"           ;; foo-mode and bar-mode snippet collection
+;;         "/path/to/yasnippet/yasmate/snippets" ;; the yasmate collection
+;;         ))
 
 ;; ==========================================
 ;; Avy/Ace
 ;; ==========================================
+;; https://github.com/abo-abo/avy
 (avy-setup-default)
-(global-set-key (kbd "C-c C-j") 'avy-resume)
-
 
 (provide 'init-local)
