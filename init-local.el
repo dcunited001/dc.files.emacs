@@ -18,6 +18,11 @@
 
 ;;; CODE:
 
+(setq user-full-name "David Conner")
+(setq user-mail-address "dconner.pro@gmail.com")
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;;; TODO: figure out how to get slashes to not disappear
 (setq custom-scratch-border "
@@ -28,9 +33,6 @@
 ;;;    ) |      ( \  o      /    /  (     (  `-.-'          (   ( \   ;;;
 ;;; ................................................................. ;;;
 ")
-
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;;; run `emali'
 ;;;
@@ -68,9 +70,11 @@
      (concat (file-name-as-directory dotfiles-home) "emacs")
      "Stores emacs path (default: ~/.files/emacs)")
 (defvar dotfiles-elisp
-     (concat (file-name-as-directory dotfiles-emacs) "support")
-     "Stores emacs support path (default: ~/.files/emacs/support)")
+  (concat (file-name-as-directory dotfiles-emacs) "support")
+  "Stores emacs support path (default: ~/.files/emacs/support)")
 
+(add-to-list 'auto-mode-alist '("/bindkeys.emacs.ubu\\'" . emacs-lisp-mode))
+(add-to-list 'auto-mode-alist '("/bindkeys.emacs.mac\\'" . emacs-lisp-mode))
 
 (add-to-list 'load-path dotfiles-elisp)
 
@@ -122,6 +126,7 @@
 
 (setq default-tab-width 2)
 (setq tab-width 2)
+(setq require-final-newline t)
 
 ;; ==========================================
 ;; Aesthetic/Misc
@@ -129,6 +134,9 @@
 (require 'powerline)
 (powerline-default-theme)
 (dimmer-mode)
+;;(wrap-no-lines)
+(global-linum-mode)
+
 
 ;; ==========================================
 ;; Yasnippet
